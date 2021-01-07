@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel=stylesheet href="css/style.css" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script/jscript.js"></script>
+
+    <title>Тестовое задание</title>
+</head>
+<body>
+<p class="title">Тестовое задание на позицию junior-разработчик</p>
+<hr>
+<ul class="title">Используемый стек технологий:
+    <li class="subtitle">Backend: Java + Spring Boot. REST-контроллер для выполнения операций CRUD и поиска;</li>
+    <li class="subtitle">База данных: MySQL. ORM: Hibernate. Структура таблиц создается автоматичкески из сущности (POJO Product) при добавлении первого продукта. Предварительно на сервере MySQL необходимо создать БД test. Параметры для подключения к БД (Имя БД, Логин, пароль) в файле resources/application.properties;</li>
+    <li class="subtitle">Frontend: HTML5 - для шаблона страницы, JQuery - для отправки ассинхроного запроса к backend, обработки ответа в формате JSON, парсинга ответа и динамическое построение DOM страницы. Оформление с помощью CSS;</li>
+    <li class="subtitle">Обработка ошибок, логирование, интерфейс - минимальны. Только для демонстрации работы Backend.</li>
+</ul>
+
+<a id="btnGetAll" class="button" href="#">Все продукты</a>
+<a id="btnShowAdd" class="button btnShowForm" href="#">Добавить продукт</a>
+<a id="btnShowUpd" class="button btnShowForm" href="#">Обновить продукт</a>
+<a id="btnShowDel" class="button btnShowForm" href="#">Удалить продукт</a>
+<a id="btnShowSearch" class="button btnShowForm" href="#">Поиск продукта по имени</a>
+<br><br>
+<div id="form">
+    <table><tr><td colspan="2"><a id="btnFormAdd" class="buttonAct button" href="#">Добавить</a>
+                    <a id="btnFormUpdate" class="buttonAct button" href="#">Обновить</a>
+                    <a id="btnFormDelete" class="buttonAct button" href="#">Удалить</a>
+                    <a id="btnFormSearch" class="buttonAct button" href="#">Поиск</a>
+                    <input type="hidden" id="selId"></td>
+        <td valign="middle">Наименование:</td><td><input type="text" id="selName"></td>
+        <td valign="middle">Описание:</td><td><textarea id="selDescription"></textarea></td>
+        <td valign="middle">Количество:</td><td><input type="text" size="3" id="selAmount"></td></tr></table>
+</div>
+<br><br>
+<div id="body"></div>
+
+<hr>
+<div id="log"></div>
+</body>
+</html>
